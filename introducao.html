@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"  xml:lang = "pt-br"  lang = "pt-br">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<link rel="stylesheet" type="text/css" href="css/abertura.css" media="screen, projection" title="normal"/>
+		<link rel="alternate stylesheet" type="text/css" href="css/abertura2.css" media="screen, projection" title="grande"/>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen, projection" />
+
+		<link rel="stylesheet" type="text/css" href="css/popup.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/notas.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/bloco.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/calculadora.css" media="screen, projection" />
+		
+		<script type="text/javascript" src="scripts/AC_RunActiveContent.js"></script>
+		<script type="text/javascript" src="scripts/protoaculous.js"></script>
+		<script type="text/javascript" src="scripts/popup.js"></script>
+		<script type="text/javascript" src="scripts/notas.js"></script>
+		<script type="text/javascript" src="scripts/bloco.js"></script>
+		<script type="text/javascript" src="scripts/calculadora.js"></script>
+		<script type="text/javascript" src="scripts/funcoes_estilizadas.js"></script>
+		
+		<script type="text/javascript" src="scripts/interface.js"></script>
+		<script type="text/javascript" src="scripts/referencias.js"></script>
+		<script type="text/javascript" src="scripts/curiosidades.js"></script>
+		
+
+
+		<script type="text/javascript" src="scripts/grafos_introducao_conteudo.js"></script>
+		
+		<script type="text/javascript">
+			var Links = $H({
+			});
+			
+			var Perguntas = $H({
+            });		
+			
+			var PosicaoAtual = {Atividade: 0, Parte: 0};
+			
+		</script>
+		
+		
+		<style type="text/css">
+		<!--
+			#imgs_abertura
+			{
+				margin: 40px 0px;	
+				width: 300px;
+				float: left;
+			}
+			
+			#texto_abertura
+			{
+				margin: 40px 20px 40px 0;
+				padding-left: 20px;
+				width: 380px;
+				float: left;
+			}
+			
+		-->
+		</style>
+
+		<title>Aviões e Matrizes</title>
+	</head>
+	<body>		
+		<div id="container">
+			<div id="cabecalho">
+				<div id="onde_estou">
+					<h1>Aviões e Matrizes</h1> <img src="img_layout/setinha-cabecalho.gif" alt=""/> <h2>Introdução</h2>
+				</div>
+				<div id="logo"></div>
+				<div id="links">
+					<a href="mapa.html">Mapa</a>
+					<span>Introdução</span>
+					<a href="index.html">Início</a>
+				</div>
+				
+				<br class="limpador" />
+			</div>
+			
+			<div id="abertura">
+				<div id="conteudo">
+					<div id="texto_abertura">
+						<p>O mapa ao lado ilustra as principais rotas da malha aérea da América do Sul, interligando alguns dos mais importantes aeroportos do continente. </p>
+						<p>Existem muitas questões envolvidas na elaboração e na utilização de uma malha aérea como essa: quantos voos são necessários para se ir de uma cidade a outra? É possível reduzir o número de voos sem prejudicar a demanda da região? Pode-se reduzir o número de voos em algum dos aeroportos sem aumentar o número de viagens necessárias para se chegar a algum país?</p>
+						<p>Nas Atividades 1 e 2 deste software, você aprenderá a utilizar matrizes para representar malhas aéreas, bem como para solucionar questões semelhantes às elaboradas acima.</p>
+						<p>No final do software, você poderá resolver três problemas, que representam desafios reais quando se discute a alocação de voos e a construção de aeroportos.</p>
+						<div class="a_esquerda">
+							<div class="a_esquerda apontador">
+								<a href="mapa.html">Começar</a>
+							</div>
+							<div class="a_esquerda seta_apontador"></div>
+						</div>
+						
+					</div>
+					
+					<div id="imgs_abertura">
+						<img src="imgs/introducao_america_do_sul.png" alt=""/>
+					</div>
+					
+					<br class="limpador">
+
+				</div>
+			</div>
+			<br class="limpador" />
+			<div id="rodape">
+				<a target="_blank" href="http://m3.mat.br">Sobre o Matemática Multimídia</a>
+			</div>
+		</div>
+		<div id="ferramentas">
+			<a href="javascript:;" onclick="return false;" id="link_notas"><span class="escondido">referencias</span></a>
+			<a href="javascript:;" onclick="return false;" id="link_bloco"><span class="escondido">bloco de notas</span></a>
+			<a href="javascript:;" id="link_calculadora" onclick="javascript:calculadora();"><span class="escondido">calculadora</span></a>
+			<a href="javascript:setActiveStyleSheet('grande');" id="link_acessibilidade"><span class="escondido">acessibilidade</span></a>
+		</div>
+		<div id="calc" class="escondido"></div>
+	</body>
+</html>

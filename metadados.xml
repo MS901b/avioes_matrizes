@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso>
+    <titulo>Aviões e Matrizes</titulo>
+    <descricao>Você consegue imaginar que relações existem entre matrizes e rotas aéreas? Neste software, seus alunos verão que as matrizes podem ser utilizadas na análise e na elaboração de malhas aéreas, aplicação que constitui um exemplo prático do produto de matrizes. Além disso, para estabelecer essas relações de maneira simplificada, será introduzido o conceito de grafo.</descricao>
+    <estado>versão final</estado>
+    <imagem>grafos.jpg</imagem>
+    <tipo>Software Educacional, Animação e Simulação</tipo>
+    <objetivos>Mostrar uma aplicação muito importante de matrizes à análise de grafos; Reforçar o significado da multiplicação de matrizes; Introduzir a noção de grafos.</objetivos>
+    <observacoes>É necessário plugin Flash 9.0 ou mais recente e máquina Java 1.6 ou mais recente.</observacoes>
+    <nivel>Ensino Médio</nivel>
+    <componente>Matemática</componente>
+    <temas>Números e Funções</temas>
+    <autores>Marcelo Firer</autores>
+    <palavras_chaves>Unicamp, Projeto M³, software educacional, matemática, matrizes, produto de matrizes, grafos, matriz de adjacência, malhas aéreas</palavras_chaves>
+    <assunto>Matrizes, aplicações; Grafos.</assunto>
+</recurso>

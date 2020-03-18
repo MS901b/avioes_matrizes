@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<software nome="grafos">
+
+	<item>
+		<tipo>atividade</tipo>
+		<rotulo>1</rotulo>
+		<nome>Voos, Grafos e Matrizes</nome>
+		<descricao>Nesta atividade, será introduzido o conceito de grafo. Você também verá como cada grafo pode ser representado por uma matriz.</descricao>
+		<posicao>
+			<coluna>0</coluna>
+			<altura>1.5</altura>
+		</posicao>
+	</item>
+
+	<item>
+		<tipo>atividade</tipo>
+		<rotulo>2</rotulo>
+		<nome>Voos com mais escalas</nome>
+		<descricao>Nesta atividade, você verá como interpretar as potências de uma matriz por meio de grafos.</descricao>
+		<posicao>
+			<coluna>1</coluna>
+			<altura>0</altura>
+		</posicao>
+		<ligacoes>
+			<com>1</com>			
+		</ligacoes>
+	</item>
+
+
+	<item>
+		<tipo>transicao</tipo>
+		<rotulo>t</rotulo>
+		<nome>Transição</nome>
+		<descricao></descricao>
+		<posicao>
+			<coluna>1.5</coluna>
+			<altura>0</altura>
+		</posicao>
+		<ligacoes>
+			<com>2</com>			
+		</ligacoes>
+	</item>
+
+		<item>
+		<tipo>atividade</tipo>
+		<rotulo>3</rotulo>
+		<nome>Problema 1</nome>
+		<descricao>Nesta atividade, você será desafiado a construir malhas aéreas que possuam restrições quanto ao número de escalas entre as cidades.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>1.5</altura>
+		</posicao>
+		<ligacoes>
+			<com>3</com>			
+		</ligacoes>
+	</item>
+
+	
+	<item>
+		<tipo>atividade</tipo>
+		<rotulo>4</rotulo>
+		<nome>Problema 2</nome>
+		<descricao>Nesta atividde, você será desafiado a construir malhas aéreas que possuam restrições quanto ao número máximo de voos partindo de cada aeroporto.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>0</altura>
+		</posicao>
+		<ligacoes>
+			<com>3</com>			
+		</ligacoes>
+	</item>
+
+
+	<item>
+		<tipo>atividade</tipo>
+		<rotulo>5</rotulo>
+		<nome>Problema 3</nome>
+		<descricao>Nesta atividade, você será desafiado a otimizar malhas aéreas que possuam diversas restrições.</descricao>
+		<posicao>
+			<coluna>2.5</coluna>
+			<altura>-1.5</altura>
+		</posicao>
+		<ligacoes>
+			<com>3</com>			
+		</ligacoes>
+	</item>
+
+</software>
+
