@@ -54,7 +54,7 @@
 			<altura>1.5</altura>
 		</posicao>
 		<ligacoes>
-			<com>t1</com>
+			<com>a3</com>
 		</ligacoes>
 		<estadoinicial>1</estadoinicial>
 	</item>
