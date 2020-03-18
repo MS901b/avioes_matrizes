@@ -2,15 +2,17 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml"  xml:lang = "pt-br"  lang = "pt-br">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/abertura.css" media="screen, projection" />
 		<link rel="stylesheet" type="text/css" href="css/popup.css" media="screen, projection" />
-		
-		<!--[if lte IE 6]>	
+		<link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet'>
+
+		<!--[if lte IE 6]>
 			<link rel="stylesheet" type="text/css" href="css/abertura_ie6.css" media="screen, projection" />
 		<![endif]-->
 
 		<script type="text/javascript" src="scripts/protoaculous.js"></script>
+		<script type="text/javascript" src="scripts/salvaLocal.js"></script>
 		<script type="text/javascript" src="scripts/AC_RunActiveContent.js"></script>
 		<script type="text/javascript" src="scripts/popup.js"></script>
 		<script type="text/javascript" src="scripts/abertura.js"></script>
@@ -18,13 +20,13 @@
 		<script type="text/javascript" src="scripts/AC_OETags.js"></script>
 		<script type="text/javascript" src="scripts/browser.js"></script>
 
-		
+
 		<script type="text/javascript">
-		
+
 		var nomeSoft="grafos";
 
-		
-		
+
+
 			var FichaUnidade = new Array(
 				{
 					titulo: 'Autor',
@@ -49,61 +51,61 @@
 				{
 					titulo: 'Ilustração',
 					texto: 'Lucas Ogasawara'
+				},
+				{
+          titulo: 'Atualizações',
+          texto: 'Claudio Dos Santos Júnior'
 				}
-				
+
 				);
 
-			var FichaProjeto = new Array(
-				{
-					titulo: '- Unicamp -',
-					texto: ''
-				},
-				{
-					titulo: 'Reitor',
-					texto: 'Fernando Ferreira Costa'
-				},
-				{
-					titulo: 'Vice-Reitor',
-					texto: 'Edgar Salvadori de Decca'
-				},
-				{
-					titulo: 'Pró-Reitor de Pós-Graduação',
-					texto: 'Euclides de Mesquita Neto'
-				},
-				{
-					titulo: '- IMECC -',
-					texto: ''
-				},
-				{
-					titulo: 'Diretor',
-					texto: 'Jayme Vaz Jr.'
-				},
-				{
-					titulo: 'Vice-Diretor',
-					texto: 'Edmundo Capelas de Oliveira'
-				},
-				{
-					titulo: '- Matemática Multimídia -',
-					texto: ''
-				},
-				{
-					titulo: 'Coordenação Geral',
-					texto: 'Samuel Rocha de Oliveira'
-				},
-				{
-					titulo: 'Coordenação de Software',
-					texto: 'Leonardo Barichello'
-				},
-				{
-					titulo: 'Coordenação de Implementação',
-					texto: 'Matias Costa'
-				}
-			);
+				var FichaProjeto = new Array(
+					{
+						titulo: '- Unicamp -',
+						texto: ''
+					},
+					{
+						titulo: 'Reitor',
+						texto: 'Marcelo Knobel'
+					},
+					{
+						titulo: 'Vice-Reitor',
+						texto: 'Edgar Salvadori de Decca'
+					},
+					{
+						titulo: '- IMECC -',
+						texto: ''
+					},
+					{
+						titulo: 'Diretor',
+						texto: 'Paulo R. C. Ruffino'
+					},
+					{
+						titulo: 'Diretor associado',
+						texto: 'Ricardo Miranda Martins'
+					},
+					{
+						titulo: '- Matemática Multimídia -',
+						texto: ''
+					},
+					{
+						titulo: 'Coordenação Geral',
+						texto: 'Samuel Rocha de Oliveira'
+					},
+					{
+						titulo: 'Coordenação de Software',
+						texto: 'Leonardo Barichello'
+					},
+					{
+						titulo: 'Coordenação de Implementação',
+						texto: 'Matias Costa'
+					}
+				);
 
-			
+
 			var Links = $H({
 			});
-			
+
 		var Perguntas = $H({
 						licenca: {
 							conteudo: '<p>É cedido ao Ministério da Educação o direito de utilizar esta obra sob as modalidades de distribuição, tradução e edição, excetuando-se o uso comercial.</p><p style="margin-top:10px;">Para informações mais detalhadas sobre as licenças dos recursos utilzados nesta unidade, veja "license.txt".</p>',
@@ -113,34 +115,31 @@
 							respostas: [{ok: 'Ok'}]
 						}
 					});
-			
-			
+
+
 		</script>
-		
+
 		<title>Aviões e Matrizes</title>
-		
+
 		<style type="text/css">
 		<!--
 		#imagem_apresentacao {background:  RGB(255,255,255); width: 920px; padding-left: 0px; height: 270px; position: relative; margin-bottom: 10px;}
 		-->
 		</style>
-		
+
 	</head>
 	<body>
 
 		<div id="container" class="margem_topo">
 					<!-- SalvaLocal -->
 					<div class="salva_local">
-						<object id="SalvaLocal" name="SalvaLocal" type="application/x-shockwave-flash" data="applets/SalvaLocal.swf" width="1" height="1">
-						<param name="menu" value="false" />
-						<param name="movie" value="applets/SalvaLocal.swf" />
-						</object>
-					</div>					
-			
-			
+						
+					</div>
+
+
 			<div id="abertura">
 				<div id="conteudo">
-					<h1>Aviões e Matrizes</h1> 
+					<h1>Aviões e Matrizes<i>v2.0</i></h1>
 					<div id="apresentacao">
 						<div id="imagem_apresentacao">
 							<img src="imgs/apresentacao.jpg" />
@@ -150,8 +149,8 @@
 								</p>
 							</div>
 						</div>
-							
-						
+
+
 						<div class="a_direita">
 							<div class="a_esquerda apontador">
 								<a href="introducao.html">Iniciar software</a>
@@ -174,24 +173,24 @@
 						</div>
 						<br class="limpador" />
 					</div>
-					
+
 					<br class="limpador" />
-					
+
 							<div id="fichas">
 						<a href="javascript:;" onclick="return false;" id="ficha_tecnica_unidade">Ficha técnica da unidade</a>
 						<span> / </span>
 						<a href="javascript:;" onclick="return false;" id="ficha_tecnica_projeto">Ficha técnica do projeto</a>
-						
-						<!-- <a href="detect.html" style="float:right;" id="ficha_tecnica_projeto">Ver relatório de compatibilidade</a> -->
+
+						<a href="detect.html" style="float:right;" id="ficha_tecnica_projeto">Ver relatório de compatibilidade</a>
 						<br class="limpador" />
-						
+
 					</div>
 
 				</div>
 			</div>
 			<br class="limpador" />
 			<div id="rodape">
-				<a id="licenca">Licença</a>&nbsp;<a target="_blank" href="http://m3.mat.br">Sobre o Matemática Multimídia</a>
+				<a id="licenca">Licença</a>&nbsp;<a target="_blank" href="http://m3.ime.unicamp.br">Sobre o Matemática Multimídia</a>
 			</div>
 		</div>
 

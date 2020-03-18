@@ -18,19 +18,19 @@ function getFlashMovie(movieName) {
 
  function getResp(id)
  {
-	return ( getFlashMovie('SalvaLocal').Pega(nomeSoft,id)=='undefined' ? '' : getFlashMovie('SalvaLocal').Pega(nomeSoft,id));
+	return ( $('SalvaLocal').Pega(nomeSoft,id)=='undefined' ? '' : $('SalvaLocal').Pega(nomeSoft,id));
  }
- 
+
 function setResp(id,valor) {
-	getFlashMovie('SalvaLocal').Salva(nomeSoft,id,valor);
+	$('SalvaLocal').Salva(nomeSoft,id,valor);
 }
 
 function apagaTodasResp() {
-	return (getFlashMovie('SalvaLocal').ApagaTudo(nomeSoft));
+	return ($('SalvaLocal').ApagaTudo(nomeSoft));
 }
 
 function init() {
-	return (getFlashMovie('SalvaLocal').ApagaTudo(nomeSoft));
+	return ($('SalvaLocal').ApagaTudo(nomeSoft));
 }
 
 function mudaValorResposta(id, value) {
@@ -42,7 +42,7 @@ function mudaValorResposta(id, value) {
  ****    																										*******
  ******************************************************************************************************************************************************/
 
- 
+
  function validacaoRespostaNumericaSimples(id,casas) {
 
 	valor = $(id).value;
@@ -50,7 +50,7 @@ function mudaValorResposta(id, value) {
 	valor = valor.replace(',','.');
 
 	if (valor.strip().empty()) valor=NaN;
-	
+
 	if (isNaN(valor) || (valor==null)) {
 		$(id).value='';
 		return false;
@@ -63,11 +63,11 @@ function mudaValorResposta(id, value) {
 function setAtividade(nome,estado,forcar)
 {
 	if (forcar==undefined) forcar=false;
-	
-	if (!forcar) 
+
+	if (!forcar)
 	{
 		if ((getResp(nome)<estado) || getResp(nome)=='') setResp(nome,estado);
-	} 
+	}
 	else setResp(nome,estado);
 
 
@@ -82,7 +82,7 @@ function roundNumber(num, dec) {
 
 
 
- 
+
 /******************************************************************************************************************************************************
  ****    										FUNCOES GEOGEBRA													*******
  ******************************************************************************************************************************************************/
@@ -103,35 +103,35 @@ function addListener(objName) {
 	var applet = document.ggbApplet;
 	strType = applet.getObjectType(objName);
 	strCommand = applet.getCommandString(objName);
-		
 
-	if (strType == "point" ) {	
-	
-		if (nomesPontosOrig.indexOf(objName)<0) {		
+
+	if (strType == "point" ) {
+
+		if (nomesPontosOrig.indexOf(objName)<0) {
 			applet.deleteObject(objName);
 		}
 	}
-		
-	if (strType == "segment" ) {	
+
+	if (strType == "segment" ) {
 		var pontosSegmento = getPontosSegmento(strCommand);
-		if ( (nomesPontosOrig.indexOf(pontosSegmento[0])==-1) || 
+		if ( (nomesPontosOrig.indexOf(pontosSegmento[0])==-1) ||
 			 (nomesPontosOrig.indexOf(pontosSegmento[1])==-1) ) {
 			applet.deleteObject(objName);
-		}	
+		}
 	}
-	
+
 	// Notifica que houve alteração no applet... cada parte faz o que achar necesário
 	ggbUpdated();
-	
+
 }
 
 // Remove Listener
 function removeListener(objName) {
 	var applet = document.ggbApplet;
-	objType = applet.getObjectType(objName);	
+	objType = applet.getObjectType(objName);
 	// Notifica que houve alteração no applet... cada parte faz o que achar necesário
 	ggbUpdated();
-	
+
 }
 
 function initNomesOriginais() {
@@ -146,19 +146,19 @@ function initNomesOriginais() {
 		strName = applet.getObjectName(i);
 		strType = applet.getObjectType(strName);
 		strCommand = applet.getCommandString(strName);
-		
+
 		if (strType == "point" ) {
-			nomesPontosOrig.push(strName);			
+			nomesPontosOrig.push(strName);
 		}
-			
+
 		if (strType == "segment" ) {
 			nomesSegmentosOrig.push(strName);
-		}		
+		}
 	}
 }
- 
- 
- 
+
+
+
 /******************************************************************************************************************************************************
  ****    																										*******
  ******************************************************************************************************************************************************/
@@ -174,43 +174,43 @@ function getPontosSegmento(strCommand) {
 }
 
 function findIndexPonto(pontoName, arrayPoints) {
-	
-	for (var i=0;i<arrayPoints.length;i++) 
+
+	for (var i=0;i<arrayPoints.length;i++)
 	{
 		if (arrayPoints[i][0]==pontoName) return i;
 	}
-	
+
 	return -1;
 }
 
 function salvaMatrizAdjacente(diagonalPrincipal) {
-	
+
 	var pontos = new Array();
 	var segmentos = new Array();
 
 	var applet = document.ggbApplet;
 	var objNumber = applet.getObjectNumber();
-	
+
 	//numero de segmentos na malha aerea
-	nArestas = 0; 
+	nArestas = 0;
 
 	for (i=0; i < objNumber; i++) {
 		strName = applet.getObjectName(i);
 		strType = applet.getObjectType(strName);
 		strCommand = applet.getCommandString(strName);
-		
+
 		if (strType == "point" )
 			{
 				pontos.push([strName,applet.getXcoord(strName),applet.getYcoord(strName)]);
 			}
-			
+
 		if (strType == "segment" )
 			{
 				nArestas++;	// calcula o numero de segmentos na malha aerea
 				pontosSegmento=getPontosSegmento(strCommand);
 				segmentos.push([strName,pontosSegmento[0],pontosSegmento[1]]);
 			}
-			
+
 	}
 
 	// cria matriz adjacente, diagonal sempre sera 1
@@ -225,7 +225,7 @@ function salvaMatrizAdjacente(diagonalPrincipal) {
 				matrix[i][k]=0;
 			}
 		}
-		
+
 	}
 
 	for (i=0; i < segmentos.length; i++) {
@@ -245,16 +245,16 @@ function imprimeMatriz(matriz) {
 //
 function corrigirMalha() {
 	var matrixCorrecao;
-	
+
 	salvaMatrizAdjacente(1);
 
 	if (nArestas <= 9) {
 		matrixCorrecao = multiplicaMatriz(matrizAdj, matrizAdj);
-		matrixCorrecao = somaMatriz(matrixCorrecao, matrizAdj);	
+		matrixCorrecao = somaMatriz(matrixCorrecao, matrizAdj);
 
 		return [verificaZeroMatriz(matrixCorrecao)];
-	} 
-	
+	}
+
 	return [false];
 }
 
@@ -264,12 +264,12 @@ function verificaZeroMatriz(matriz) {
 
 	for (var i = 0; i < matriz.length; i++) {
 		for (var j = 0; j < matriz[0].length; j++) {
-			if (matriz[i][j] == 0) {				
+			if (matriz[i][j] == 0) {
 				matrizOk = false;
 			}
 		}
 	}
-	
+
 	return matrizOk;
 }
 
@@ -277,36 +277,36 @@ function verificaZeroMatriz(matriz) {
 function multiplicaMatriz(matrizA, matrizB) {
 	var nColunasA = 0;
 	var nLinhasB = 0;
-	
+
 	// inicializa matriz que sera o resultado da multiplicacao
 	var novaMatriz = new Array(matrizA.length);
 	for (var i = 0; i < novaMatriz.length; i++) {
 		novaMatriz[i] = new Array(matrizB[0].length);
 	}
-	
+
 	// inicializa valores da nova matriz
 	for(var i = 0; i < novaMatriz.length; i++) {
 		for(var j = 0; j < novaMatriz[0].length; j++) {
 			novaMatriz[i][j] = 0;
 		}
 	}
-	
+
 	// Verifica se e possivel multiplicar as matrizes, se sim multiplica
 	nColunasA = matrizA[0].length;
 	nLinhasB = matrizB.length;
-	
+
 	if (nColunasA == nLinhasB) {
 		for(var i = 0; i < matrizA.length; i++) {
 			for(var j = 0; j < matrizB[0].length; j++) {
 				for(var k = 0; k < matrizA[0].length; k++) {
-					novaMatriz[i][j] += matrizA[i][k]*matrizB[k][j];								
+					novaMatriz[i][j] += matrizA[i][k]*matrizB[k][j];
 				}
 			}
 		}
 	} else {
 		alert('Nao e possivel multiplicar as matrizes');
 	}
-	
+
 	return novaMatriz;
 }
 
@@ -316,20 +316,20 @@ function somaMatriz(matrizA, matrizB) {
 	var nColunasA = matrizA[0].length;
 	var nLinhasB = matrizB.length;
 	var nColunasB = matrizB[0].length;
-	
+
 	// inicializa nova matriz
 	var matrizSoma = new Array(matrizA.length);
 	for (var i = 0; i < matrizSoma.length; i++) {
 		matrizSoma[i] = new Array(matrizA[0].length);
 	}
-	
+
 	// inicializa valores da nova matriz
 	for(var i = 0; i < matrizSoma.length; i++) {
 		for(var j = 0; j < matrizSoma[0].length; j++) {
 			matrizSoma[i][j] = 0;
 		}
 	}
-	
+
 	// Verifica se e possivel somar as matrizes
 	if(nLinhasA == nLinhasB && nColunasA == nColunasB) {
 		for(var i = 0; i < nLinhasA; i++) {
@@ -380,7 +380,7 @@ function verificaCruzMatriz(matriz) {
 			}
 		}
 	}
-	
+
 	return matrizOk;
 }
 
@@ -392,18 +392,18 @@ function verificaCruzMatriz(matriz) {
 //M+M2+M3 = 4
 	function atualizaMatriz(tipoMatriz) {
 	var id = null;
-	
+
 	salvaMatrizAdjacente(0);
-	
+
 	switch (tipoMatriz) {
-	
+
 	case 0:
 		var matrizCorrecao = matrizAdj;
 		break;
-	case 1: 
+	case 1:
 		var matrizCorrecao = multiplicaMatriz(matrizAdj, matrizAdj);
 		break;
-	case 2: 
+	case 2:
 		var matrizCorrecao = multiplicaMatriz(matrizAdj, matrizAdj);
 		matrizCorrecao = multiplicaMatriz(matrizCorrecao, matrizAdj);
 	break;
@@ -420,9 +420,9 @@ function verificaCruzMatriz(matriz) {
 		matrizCorrecao = somaMatriz(matrizCorrecao, matrizM3);
 		break;
 	}
-	
+
 	for (var i = 0; i < matrizCorrecao.length; i++) {
-		for (var j = 0; j < matrizCorrecao[0].length; j++) {						
+		for (var j = 0; j < matrizCorrecao[0].length; j++) {
 			$('Ma'+(i+1)+(j+1)).update(matrizCorrecao[i][j]);
 		}
 	}
@@ -439,7 +439,7 @@ function totalNumeroUm(numero) {
 	var matrizOk = true;
 
 	salvaMatrizAdjacente(0);
-	
+
 	for (var i = 0; i < matrizAdj.length; i++) {
 		if (matrizOk) {
 			for (var j = 0; j < matrizAdj[0].length; j++) {
@@ -454,8 +454,8 @@ function totalNumeroUm(numero) {
 			totalLinha = 0;
 		}
 	}
-	
-	
+
+
 	if (total > numero) {
 		matrizOk = false;
 	}
