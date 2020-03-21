@@ -31,9 +31,8 @@
 
 	<item><id>t1</id>
 		<tipo>transicao</tipo>
-		<rotulo>t</rotulo>
-		<nome>Transição</nome>
-		<descricao></descricao>
+		<nome>Tela de Transição</nome>
+		<descricao>Se prepare para resolver alguns problemas com base no que aprendeu na segunda atividade.</descricao>
 		<posicao>
 			<coluna>1.5</coluna>
 			<altura>0</altura>
@@ -54,7 +53,7 @@
 			<altura>1.5</altura>
 		</posicao>
 		<ligacoes>
-			<com>a3</com>
+			<com>t1</com>
 		</ligacoes>
 		<estadoinicial>1</estadoinicial>
 	</item>
@@ -70,7 +69,7 @@
 			<altura>0</altura>
 		</posicao>
 		<ligacoes>
-			<com>a3</com>
+			<com>t1</com>
 		</ligacoes>
 		<estadoinicial>1</estadoinicial>
 	</item>
@@ -86,7 +85,7 @@
 			<altura>-1.5</altura>
 		</posicao>
 		<ligacoes>
-			<com>a4</com>
+			<com>t1</com>
 		</ligacoes>
 		<estadoinicial>1</estadoinicial>
 	</item>

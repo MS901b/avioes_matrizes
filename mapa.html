@@ -33,6 +33,20 @@
 					}
 				}
 			</script>
+
+			<script>
+			fetch("scripts/estrutura.xml")
+				.then(function(response){
+				response.text().then(function(data){
+					const m = new Mapinha("conteudo", nomeSoft);
+					m.parseXml(data);
+					m.adicionaBotoesItens();
+					});
+				})
+				.catch(function(err){
+				console.error('Failed retrieving information', err);
+				});
+		</script>
 	</head>
 
 
@@ -63,20 +77,6 @@
 				<a target="_blank" href="http://m3.ime.unicamp.br/">Sobre o Matemática Multimídia</a>
 			</div>
 		</div>
-
-		<script>
-		fetch("scripts/estrutura.xml")
-			.then(function(response){
-			response.text().then(function(data){
-				const m = new Mapinha("conteudo", nomeSoft);
-				m.parseXml(data);
-				m.adicionaBotoesItens();
-				});
-			})
-			.catch(function(err){
-			console.error('Failed retrieving information', err);
-			});
-	</script>
 
 	</body>
 </html>
