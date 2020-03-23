@@ -3,6 +3,8 @@
 <html xmlns = "http://www.w3.org/1999/xhtml"  xml:lang = "pt-br"  lang = "pt-br">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name=viewport content="width=device-width,initial-scale=1">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/estilo_grande.css" media="screen, projection" title="normal"/>
 		<link rel="alternate stylesheet"  type="text/css" href="css/estilo_grande2.css" title="grande" />
@@ -95,7 +97,7 @@
 
 			<div id="software">
 				<div id="conteudo">
-					
+
 
 					<div class="texto_solto">
 						<p>Construir uma malha aérea pequena, mas que ainda assim atenda às exigências de um país é um grande desafio. Tente montar a menor malha possível para um país com aeroportos em 8 cidades, e cuja forma seja tal que se possa ir de uma cidade a outra com, no máximo, 2 voos.</p>
@@ -109,23 +111,26 @@
 
 									<input type="ggbToolbar" botoes="15,6" idApplet="ggbApplet" id="ggbToolbar1"/>
 
-									<applet name="ggbApplet" code="geogebra.GeoGebraApplet" codebase="./jars/" archive="geogebra.jar" width="760" height="264" MAYSCRIPT>
-											<param name="codebase" value="./jars/" />
-											<param name="filename" value="./applets/atividade3_parte1.ggb" />
-											<param name="framePossible" value="false">
-											<param name="showResetIcon" value="false">
-											<param name="enableRightClick" value="false">
-											<param name="showMenuBar" value="false">
-											<param name="showToolBar" value="false">
-											<param name="showToolBarHelp" value="false">
-											<param name="showAlgebraInput" value="false">
-											<param name="customToolBar" value="15 | 6">
-											<param name="enableShiftDragZoom" value="false"/>
-											<param name="enableChooserPopups" value="false" />
-											<param name="enableLabelDrags" value="false" />
-											<param name="language" value="pt">
-												Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
-									</applet>
+									<div id="ggbApplet"></div>
+									  <script>
+									    var ggbApp = new GGBApplet({"appName": "classic",
+									    "width": 760, "height": 264,
+									    "filename": "applets/atividade3_parte1.ggb",
+									    "showResetIcon": false,
+									    "enableRightClick": false,
+									    "showMenuBar": false,
+									    "showToolBar": false,
+									    "showToolBarHelp": false,
+									    "showAlgebraInput": false,
+									    "customToolBar": 15 | 6,
+									    "enableShiftDragZoom": false,
+									    "enableLabelDrags": false,
+									    "useBrowserForJS": true
+									    }, true);
+									    window.addEventListener("load", function() {
+									    ggbApp.inject('ggbApplet');
+									    });
+									  </script>
 
 							</div>
 

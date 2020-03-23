@@ -3,6 +3,8 @@
 <html xmlns = "http://www.w3.org/1999/xhtml"  xml:lang = "pt-br"  lang = "pt-br">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name=viewport content="width=device-width,initial-scale=1">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/estilo_grande.css" media="screen, projection" title="normal"/>
 		<link rel="alternate stylesheet"  type="text/css" href="css/estilo_grande2.css" title="grande" />
@@ -106,27 +108,27 @@
 							<div class="altura_applet_3 borda  sem_fundo">
 
 							<input type="ggbToolbar" botoes="15,6" idApplet="ggbApplet" id="ggbToolbar1"/>
-							<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
-								codebase="./jars/"
-								width="760" height="264" MAYSCRIPT>
-								<param name="filename" value="applets/atividade4_parte1.ggb" />
-								<param name="java_arguments" value="-Xmx512m"/>
-								<param name="framePossible" value="false"/>
-								<param name="showResetIcon" value="false"/>
-								<param name="showAnimationButton" value="false"/>
-								<param name="enableRightClick" value="false"/>
-								<param name="errorDialogsActive" value="true"/>
-								<param name="enableLabelDrags" value="false"/>
-								<param name="showMenuBar" value="false"/>
-								<param name="showToolBar" value="false"/>
-								<param name="showToolBarHelp" value="false"/>
-								<param name="showAlgebraInput" value="false"/>
-								<param name="enableShiftDragZoom" value="false"/>
-								<param name="language" value="pt">
-
-
-							Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
-							</applet>
+							<div id="ggbApplet"></div>
+							  <script>
+							    var ggbApp = new GGBApplet({"appName": "classic",
+							    "width": 760, "height": 264,
+							    "filename": "applets/atividade4_parte1.ggb",
+							    "showResetIcon": false,
+							    "showAnimationButton": false,
+							    "enableRightClick": false,
+							    "errorDialogsActive": false,
+							    "enableLabelDrags": false,
+							    "showMenuBar": false,
+							    "showToolBar": false,
+							    "showToolBarHelp": false,
+							    "showAlgebraInput": false,
+							    "enableShiftDragZoom": false,
+							    "useBrowserForJS": true
+							    }, true);
+							    window.addEventListener("load", function() {
+							    ggbApp.inject('ggbApplet');
+							    });
+							  </script>
 
 
 							</div>
