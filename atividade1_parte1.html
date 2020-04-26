@@ -163,23 +163,24 @@
 			<div id="borda_applet" class="altura_applet_3 borda sem_fundo">
 				<input type="ggbToolbar" botoes="15,6" idApplet="ggbApplet" id="ggbToolbar1"/>
 				<div id="ggbApplet"></div>
-				  <script>
-				    var ggbApp = new GGBApplet({"appName": "classic",
-				    "width": 520, "height": 264,
-				    "filename": "applets/atividade1_parte1e2.ggb",
-				    "showResetIcon": false,
-				    "enableRightClick": false,
-				    "showMenuBar": false,
-				    "showToolBar": false,
-				    "showToolBarHelp": false,
-				    "showAlgebraInput": false,
-				    "enableShiftDragZoom": false,
-				    "useBrowserForJS": true
-				    }, true);
-				    window.addEventListener("load", function() {
-				    ggbApp.inject('ggbApplet');
-				    });
-				  </script>
+				<script>
+			var ggbApp = new GGBApplet({
+				"appName": "classic",
+				"width": 519, "height": 380,
+				"filename": "applets/fase_controles.ggb",
+				"showResetIcon": false,
+				"enableRightClick": false,
+				"showMenuBar": false,
+				"showToolBar": false,
+				"showToolBarHelp": false,
+				"showAlgebraInput": false,
+				"enableShiftDragZoom": false,
+				"useBrowserForJS": true
+			}, true);
+			window.addEventListener("load", function () {
+				ggbApp.inject('ggbApplet');
+			});
+		</script>
 
 
 				<div class="canto sup_esq"></div>
