@@ -34,14 +34,6 @@ var idPergunta = '';
 // Inicializa ggb
 
 
-
-Event.observe(document, 'flash:SalvaLocal', function(ev)
-{
-
-	SalvaLocalLoaded = true;
-	checkInits();
-});
-
 function ggbOnInit() {
 	GGBLoaded = true;
 	checkInits();
@@ -68,7 +60,8 @@ function InitOnLoad() {
 		var applet = document.ggbApplet;
 		initNomesOriginais();
 		registerListeners();
-		if (!(getResp('xmlGrafo')=='')) {
+		
+		if ( !(getResp('xmlGrafo')=='') && !(getResp('xmlGrafo')==null)) {
 			applet.setXML(getResp('xmlGrafo'));
 		}
 		$('ggbToolbar1_0').click();
@@ -423,7 +416,7 @@ function selecionou_q_5_a() {
 	var tmpXML = getResp(idPergunta);
 
 	var applet = document.ggbApplet;
-	if (!(tmpXML=='')) {
+	if ( !(tmpXML=='') && !(tmpXML==null) ) {
 		var applet = document.ggbApplet;
 		applet.setXML(tmpXML);
 	} else { applet.setXML(xmlQ5init);
@@ -437,7 +430,7 @@ function selecionou_q_5_b() {
 	// var idPergunta = PosicaoAtual.Questao+'_'+PosicaoAtual.Item)+'_xml';
 	var tmpXML = getResp(idPergunta);
 	var applet = document.ggbApplet;
-	if (!(tmpXML=='')) {
+	if ( !(tmpXML=='') && !(tmpXML==null) ) {
 		applet.setXML(tmpXML);
 	} else { applet.setXML(xmlQ5init);
 	};
@@ -450,7 +443,7 @@ function selecionou_q_5_c() {
 	// var idPergunta = PosicaoAtual.Questao+'_'+PosicaoAtual.Item)+'_xml';
 	var tmpXML = getResp(idPergunta);
 	var applet = document.ggbApplet;
-	if (!(tmpXML=='')) {
+	if ( !(tmpXML=='') && !(tmpXML==null) ) {
 		applet.setXML(tmpXML);
 	} else { applet.setXML(xmlQ5init);
 	};

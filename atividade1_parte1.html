@@ -7,6 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen, projection" title="normal"/>
 		<link rel="alternate stylesheet"  type="text/css" href="css/estilo2.css" title="grande" />
 
+		<!-- Geogebra -->
+		<meta name=viewport content="width=device-width,initial-scale=1">
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		
 		<link rel="stylesheet" type="text/css" href="css/popup.css" media="screen, projection" />
 		<link rel="stylesheet" type="text/css" href="css/notas.css" media="screen, projection" />
 		<link rel="stylesheet" type="text/css" href="css/bloco.css" media="screen, projection" />
@@ -42,7 +46,7 @@
 		<script type="text/javascript" src="scripts/inputs.js"></script>
 		<script type="text/javascript">
 
-
+			var nomeSoft="grafos";
 			var PosicaoAtual = {Atividade: 1, Parte: 0};
 			var ProximaParte = 'atividade1_parte2.html';
 
@@ -162,6 +166,7 @@
 		<div id="applet">
 			<div id="borda_applet" class="altura_applet_3 borda sem_fundo">
 				<input type="ggbToolbar" botoes="15,6" idApplet="ggbApplet" id="ggbToolbar1"/>
+
 				<div id="ggbApplet"></div>
 				<script>
 				  var ggbApp = new GGBApplet({"appName": "classic",

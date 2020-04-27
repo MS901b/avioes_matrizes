@@ -49,7 +49,7 @@ function InitOnLoad()
 	initNomesOriginais();
 	registerListeners();
 
-	if (getResp('a3_problema')!='') {
+	if ( (getResp('a3_problema')!='') && (getResp('a3_problema')!=null) )  {
 		applet.setXML(getResp('a3_problema'));
 	}
 

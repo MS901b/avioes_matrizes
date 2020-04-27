@@ -45,7 +45,7 @@ function InitOnLoad()
 	initNomesOriginais();
 	registerListeners();
 
-	if (getResp('a4_problema')!='') {
+	if ( (getResp('a4_problema')!='') && (getResp('a4_problema')!=null) ){
 		applet.setXML(getResp('a4_problema'));
 	}
 
