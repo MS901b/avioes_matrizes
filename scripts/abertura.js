@@ -73,7 +73,7 @@ function analisaAmbiente()
 	{
 		var conteudo =
 			'<p><strong>Erro de execução – Não abra esse arquivo html diretamente.</strong></p>'
-			+ '<p>Este software deve ser utilizado online, através do <a target="blank"; href="http://m3.ime.unicamp.br"> Matemática Multimídia</a>.</p>'
+			+ '<p>Este software deve ser utilizado online, através do site <a target="blank"; href="https://m3.ime.unicamp.br/">https://m3.ime.unicamp.br/</a>.</p>'
 			+ '<p><a id="fechar_desesperado" style="float:right; href="#">Fechar</a></p>'
 			+ '<br class="limpador" />';
 
